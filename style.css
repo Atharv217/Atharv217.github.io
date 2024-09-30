@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #000; /* Set the background to black */
+    background-color: #000; /* Black background */
     color: #fff; /* Set the default font color to white */
 }
 
@@ -82,13 +82,14 @@ a {
 }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 120px;   /* Width of the image */
+    height: 120px;  /* Height should be the same to ensure it's round */
     object-fit: cover;
-    border-radius: 50%; /* Makes the image circular */
+    border-radius: 50%; /* This makes the image round */
     flex: 1;
     border: 3px solid #fff; /* White border around the image for contrast */
     margin-left: 30px; /* Add space between image and text */
+    align-self: flex-end; /* Aligns the image to the right side */
 }
 
 /* Skills Section */
