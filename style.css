@@ -4,8 +4,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #000;
+    background-color: #000; /* Set the background to black */
+    color: #fff; /* Set the default font color to white */
 }
 
 .container {
@@ -15,19 +15,19 @@ body {
 }
 
 h1, h2, h3 {
-    color: #000;
+    color: #fff; /* White for all headers */
     font-weight: 600;
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #fff; /* White for links */
 }
 
 /* Header Section */
 .header {
-    background-color: #fff;
-    color: #000;
+    background-color: #000; /* Black background */
+    color: #fff;
     padding: 100px 0;
     text-align: center;
     position: relative;
@@ -46,51 +46,54 @@ a {
 
 /* About Me Section */
 .about-me {
-    background-color: #fff;
+    background-color: #333; /* Dark grey for the card background */
     padding: 50px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse; /* Move the image to the right */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .about-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    background-color: #f5f5f5;
+    gap: 30px;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
 
 .about-content {
     flex: 2;
     text-align: left;
+    color: #ccc; /* Lighter grey for text to contrast the dark background */
 }
 
 .about-content h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #fff; /* White for headers */
 }
 
 .about-content p {
     margin-bottom: 20px;
+    color: #ccc; /* Light grey for paragraphs */
 }
 
 .profile-img {
-    width: 80px; /* Smaller image */
-    height: 80px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 50%; /* Makes the image circular */
     flex: 1;
+    border: 3px solid #fff; /* White border around the image for contrast */
+    margin-left: 30px; /* Add space between image and text */
 }
 
 /* Skills Section */
 .skills {
-    background-color: #fff;
+    background-color: #000; /* Black background for the skills section */
     padding: 80px 0;
     text-align: center;
 }
@@ -98,7 +101,7 @@ a {
 .skills h2 {
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: #000;
+    color: #fff;
 }
 
 .skills-grid {
@@ -110,7 +113,7 @@ a {
 }
 
 .skill-box {
-    background: #f9f9f9;
+    background: #333; /* Dark grey for skill boxes */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -120,18 +123,18 @@ a {
 
 .skill-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2); /* White hover effect */
 }
 
 .skill-box h3 {
     font-size: 1.6rem;
     margin-bottom: 10px;
-    color: #000;
+    color: #fff; /* White for skill headers */
 }
 
 .skill-box p {
     font-size: 1rem;
-    color: #666;
+    color: #ccc; /* Light grey for skill descriptions */
 }
 
 @media screen and (max-width: 768px) {
@@ -156,19 +159,20 @@ a {
 
 /* Footer Section */
 .footer {
-    background-color: #f5f5f5;
-    color: #000;
+    background-color: #333; /* Dark grey for the footer */
+    color: #fff;
     padding: 50px 0;
     text-align: center;
 }
 
 .footer p {
     margin-bottom: 20px;
+    color: #ccc; /* Light grey for footer text */
 }
 
 .footer .btn {
-    background: #000;
-    color: #fff;
+    background: #fff; /* White button */
+    color: #000; /* Black text on the button */
     padding: 10px 20px;
     border-radius: 30px;
     font-weight: 500;
@@ -176,5 +180,6 @@ a {
 }
 
 .footer .btn:hover {
-    background: #333;
+    background: #ccc; /* Lighter grey on hover */
+    color: #000;
 }
