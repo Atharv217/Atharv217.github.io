@@ -28,27 +28,29 @@ a {
 /* Header Section */
 .header {
     background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    background: url("./WitchingHourGradient.jpg") no-repeat center center/cover;
     color: #fff;
     padding: 100px 0;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 .header h1 {
     font-size: 3rem;
     font-weight: 700;
-    animation: slideInFromLeft 1s ease-in-out;
+    animation: scaleUpFade 1.5s ease-in-out;
 }
 
 .header p {
     font-size: 1.3rem;
     margin-top: 10px;
-    animation: slideInFromRight 1s ease-in-out;
+    animation: fadeInSlideUp 1.8s ease-in-out;
 }
 
 .highlight {
     color: #ff8c94;
-    animation: popIn 2s ease-in-out infinite alternate;
+    animation: pulse 3s infinite;
     font-size: 50px;
 }
 
@@ -65,6 +67,7 @@ a {
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    overflow: hidden;
     margin-bottom: 20px;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
@@ -77,8 +80,10 @@ a {
 .profile-img {
     border-radius: 50%;
     margin: 20px;
-    width: 300px;
-    height: 400px;
+    width: 120px;  /* Smaller size for better balance */
+    height: 120px;
+    object-fit: cover;
+    animation: rotateIn 1.2s ease-in-out;
 }
 
 .about-content {
@@ -103,7 +108,7 @@ a {
     border-radius: 30px;
     font-weight: 500;
     transition: background 0.3s ease, transform 0.3s ease;
-    animation: bounce 2s infinite;
+    animation: pulse 2s infinite;
 }
 
 .btn:hover {
@@ -135,12 +140,21 @@ a {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
-    animation: fadeIn 2s ease;
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
 }
 
 .skill:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.skill:nth-child(even) {
+    animation-delay: 0.4s;
 }
 
 .skill h3 {
@@ -169,7 +183,7 @@ a {
     background: #ffcc00;
 }
 
-/* Animations */
+/* New and Improved Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -179,42 +193,56 @@ a {
     }
 }
 
-@keyframes slideInFromLeft {
+@keyframes scaleUpFade {
     from {
-        transform: translateX(-100%);
+        transform: scale(0.8);
         opacity: 0;
     }
     to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInFromRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes popIn {
-    from {
         transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
+        opacity: 1;
     }
 }
 
-@keyframes bounce {
-    0%, 100% {
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
     50% {
-        transform: translateY(-10px);
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
     }
 }
