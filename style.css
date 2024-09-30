@@ -16,7 +16,6 @@ body {
 
 h1, h2, h3 {
     color: #000;
-    animation: fadeIn 2s ease;
 }
 
 a {
@@ -37,20 +36,11 @@ a {
 .header h1 {
     font-size: 3rem;
     font-weight: 700;
-    animation: slideInFromLeft 1.2s ease-in-out;
 }
 
 .header p {
     font-size: 1.2rem;
     margin-top: 10px;
-    animation: fadeIn 2s ease-in;
-}
-
-.highlight {
-    animation: typing 2s steps(22), blinkCaret 1s step-end infinite;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #000;
 }
 
 /* About Me Section */
@@ -69,8 +59,8 @@ a {
 }
 
 .about-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
 .about-content h2 {
@@ -90,12 +80,11 @@ a {
     color: #fff;
     border-radius: 30px;
     font-weight: 500;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .btn:hover {
     background: #333;
-    transform: translateY(-5px);
 }
 
 /* Skills Section */
@@ -122,11 +111,10 @@ a {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
-    animation: fadeIn 1.5s ease;
 }
 
 .skill:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -154,43 +142,4 @@ a {
 
 .footer .btn:hover {
     background: #333;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideInFromLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blinkCaret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: black;
-    }
 }
