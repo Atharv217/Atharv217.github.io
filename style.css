@@ -1,72 +1,92 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #000;
+    background-color: #f0f0f0;
+    color: #333;
+    scroll-behavior: smooth;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 h1, h2, h3 {
-    color: #000;
-    font-weight: 600;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #333;
 }
 
 /* Header Section */
 .header {
-    background-color: #fff;
-    color: #000;
-    padding: 100px 0;
+    background: linear-gradient(135deg, #3A1C71, #FFAF7B);
+    color: #fff;
+    padding: 150px 0;
     text-align: center;
     position: relative;
 }
 
 .header h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 4rem;
+    font-weight: 800;
 }
 
 .header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #ff6b6b;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #d94848;
 }
 
 /* About Me Section */
 .about-me {
     background-color: #fff;
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .about-card {
     display: flex;
-    justify-content: flex-start; /* Aligns the text and image properly */
+    justify-content: space-between;
     align-items: center;
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
 }
 
 .about-card img {
     border-radius: 50%;
-    width: 120px; /* Smaller profile image */
-    height: 120px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    margin-left: 20px; /* Adds space between text and image */
-    order: 2; /* Places the image on the right side */
+    margin-left: 30px;
 }
 
 .about-content {
@@ -75,112 +95,140 @@ a {
 }
 
 .about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 25px;
 }
 
 .about-content p {
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #000;
-    color: #fff;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: #333;
+    margin-bottom: 25px;
 }
 
 /* Skills Section */
 .skills {
-    background-color: #f5f5f5;
-    padding: 50px 0;
+    background: linear-gradient(135deg, #FFAF7B, #D76D77);
+    padding: 80px 0;
     text-align: center;
+    color: #fff;
 }
 
 .skills h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #000;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .skills-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .skill-box {
     background: #fff;
-    border-radius: 15px;
-    padding: 30px;
-    width: calc(33.333% - 20px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    color: #333;
     border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
 }
 
 .skill-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .skill-box h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #000;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .skill-box p {
-    font-size: 1rem;
-    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
 .skill-box .skill-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-    color: #000;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #FF6B6B;
 }
 
+.skill-progress {
+    position: relative;
+    background: #eaeaea;
+    border-radius: 50px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.skill-progress .progress-bar {
+    height: 100%;
+    background: #FF6B6B;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.skill-box:hover .progress-bar {
+    width: 80%; /* Adjust the percentage according to skill level */
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .skill-box {
-        width: calc(50% - 20px);
+    .about-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-card img {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        text-align: center;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
     .skill-box {
-        width: 100%;
+        padding: 30px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
     }
 }
 
 /* Footer Section */
 .footer {
-    background-color: #f5f5f5;
-    color: #000;
+    background-color: #333;
+    color: #fff;
     padding: 50px 0;
     text-align: center;
 }
 
 .footer p {
     margin-bottom: 20px;
+    color: #bbb;
 }
 
 .footer .btn {
-    background: #000;
+    background: #FF6B6B;
     color: #fff;
 }
 
 .footer .btn:hover {
-    background: #333;
+    background: #d94848;
 }
