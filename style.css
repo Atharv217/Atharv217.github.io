@@ -82,14 +82,13 @@ a {
 }
 
 .profile-img {
-    width: 120px;   /* Width of the image */
-    height: 120px;  /* Height should be the same to ensure it's round */
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    border-radius: 50%; /* This makes the image round */
-    flex: 1;
+    border-radius: 50%; /* This ensures the image is fully circular */
+    flex: 0 0 120px; /* Set a fixed size for the image */
     border: 3px solid #fff; /* White border around the image for contrast */
     margin-left: 30px; /* Add space between image and text */
-    align-self: flex-end; /* Aligns the image to the right side */
 }
 
 /* Skills Section */
