@@ -31,13 +31,15 @@ body {
   padding: 4rem 2rem;
 }
 .profile-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: 180px;        /* fixed size */
+  height: 180px;
+  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;   /* keeps proper crop */
+  display: block;
+  margin: 0 auto 1.5rem auto; /* centers */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
 .hero-text h2 { font-size: 2rem; margin-bottom: 1rem; }
 .hero-text span { color: #1d4ed8; }
 .hero-text p { max-width: 600px; margin: 0 auto 1.5rem; color: #444; }
